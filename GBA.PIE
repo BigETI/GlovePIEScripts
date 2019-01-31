@@ -1,0 +1,13 @@
+﻿Key.Up = (Wiimote1.HasClassic and Wiimote1.Classic.Up) or ((Wiimote1.HasClassic == false) and Wiimote1.Right)
+Key.Down = (Wiimote1.HasClassic and Wiimote1.Classic.Down) or ((Wiimote1.HasClassic == false) and Wiimote1.Left)
+Key.Left = (Wiimote1.HasClassic and Wiimote1.Classic.Left) or ((Wiimote1.HasClassic == false) and Wiimote1.Up)
+Key.Right = (Wiimote1.HasClassic and Wiimote1.Classic.Right) or ((Wiimote1.HasClassic == false) and Wiimote1.Down)
+Key.Z = (Wiimote1.HasClassic and (Wiimote1.Classic.a or Wiimote1.Classic.x)) or ((Wiimote1.HasClassic == false) and Wiimote1.Two)
+Key.X = (Wiimote1.HasClassic and (Wiimote1.Classic.b or Wiimote1.Classic.y)) or ((Wiimote1.HasClassic == false) and Wiimote1.One)
+Key.A = (Wiimote1.HasClassic and (Wiimote1.Classic.ZL or Wiimote1.Classic.LFull)) or ((Wiimote1.HasClassic == false) and Wiimote1.A)
+Key.S = (Wiimote1.HasClassic and (Wiimote1.Classic.ZR or Wiimote1.Classic.RFull)) or ((Wiimote1.HasClassic == false) and Wiimote1.B)
+Key.BackSpace = (Wiimote1.HasClassic and Wiimote1.Classic.Minus) or ((Wiimote1.HasClassic == false) and Wiimote1.Minus)
+Key.Enter = (Wiimote1.HasClassic and Wiimote1.Classic.Plus) or ((Wiimote1.HasClassic == false) and Wiimote1.Plus)
+Wiimote1.Leds = 1
+
+

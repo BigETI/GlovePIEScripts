@@ -1,0 +1,10 @@
+﻿var.deadZone := 0.4
+Keyboard.Y = XInput.A or XInput.B
+Keyboard.X = XInput.X or XInput.Y
+Keyboard.Left = XInput.Left or (XInput.Joy1X <= (-var.deadZone))
+Keyboard.Right = XInput.Right or (XInput.Joy1X >= var.deadZone)
+Keyboard.Up = XInput.Up or (XInput.Joy1Y >= var.deadZone)
+Keyboard.Down = XInput.Down or (XInput.Joy1Y <= (-var.deadZone))
+Keyboard.Escape = XInput.Start
+
+

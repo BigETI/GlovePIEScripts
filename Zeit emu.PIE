@@ -1,0 +1,53 @@
+If 0 = 0
+wait 1 s
+var.s = (var.s + 1) % 61
+endif
+If (var.h < 10) and (var.m < 10) and (var.s < 10) and (var.ms < 10)
+debug = "0"+(INT(var.h))+":"+"0"+(INT(var.m))+":"+"0"+(INT(var.s))+";"+"0"+(INT(var.ms))
+elseif (var.h > 9) and (var.m < 10) and (var.s < 10) and (var.ms < 10)
+debug = (INT(var.h))+":"+"0"+(INT(var.m))+":"+"0"+(INT(var.s))+";"+"0"+(INT(var.ms))
+elseif (var.h < 10) and (var.m > 9) and (var.s < 10) and (var.ms < 10)
+debug = "0"+(INT(var.h))+":"+(INT(var.m))+":"+"0"+(INT(var.s))+";"+"0"+(INT(var.ms))
+elseif (var.h > 9) and (var.m > 9) and (var.s < 10) and (var.ms < 10)
+debug = (INT(var.h))+":"+(INT(var.m))+":"+"0"+(INT(var.s))+";"+"0"+(INT(var.ms))
+elseif (var.h < 10) and (var.m < 10) and (var.s > 9) and (var.ms < 10)
+debug = "0"+(INT(var.h))+":"+"0"+(INT(var.m))+":"+(INT(var.s))+";"+"0"+(INT(var.ms))
+elseif (var.h > 9) and (var.m < 10) and (var.s > 9) and (var.ms < 10)
+debug = (INT(var.h))+":"+"0"+(INT(var.m))+":"+(INT(var.s))+";"+"0"+(INT(var.ms))
+elseif (var.h < 10) and (var.m > 9) and (var.s > 9) and (var.ms < 10)
+debug = "0"+(INT(var.h))+":"+(INT(var.m))+":"+(INT(var.s))+";"+"0"+(INT(var.ms))
+elseif (var.h > 9) and (var.m > 9) and (var.s < 9) and (var.ms < 10)
+debug = (INT(var.h))+":"+(INT(var.m))+":"+(INT(var.s))+";"+"0"+(INT(var.ms))
+elseif (var.h < 10) and (var.m < 10) and (var.s < 10) and (var.ms > 9)
+debug = "0"+(INT(var.h))+":"+"0"+(INT(var.m))+":"+"0"+(INT(var.s))+";"+(INT(var.ms))
+elseif (var.h > 9) and (var.m < 10) and (var.s < 10) and (var.ms > 9)
+debug = (INT(var.h))+":"+"0"+(INT(var.m))+":"+"0"+(INT(var.s))+";"+(INT(var.ms))
+elseif (var.h < 10) and (var.m > 9) and (var.s < 10) and (var.ms > 9)
+debug = "0"+(INT(var.h))+":"+(INT(var.m))+":"+"0"+(INT(var.s))+";"+(INT(var.ms))
+elseif (var.h > 9) and (var.m > 9) and (var.s < 10) and (var.ms > 9)
+debug = (INT(var.h))+":"+(INT(var.m))+":"+"0"+(INT(var.s))+";"+(INT(var.ms))
+elseif (var.h < 10) and (var.m < 10) and (var.s > 9) and (var.ms > 9)
+debug = "0"+(INT(var.h))+":"+"0"+(INT(var.m))+":"+(INT(var.s))+";"+(INT(var.ms))
+elseif (var.h > 9) and (var.m < 10) and (var.s > 9) and (var.ms > 9)
+debug = (INT(var.h))+":"+"0"+(INT(var.m))+":"+(INT(var.s))+";"+(INT(var.ms))
+elseif (var.h < 10) and (var.m > 9) and (var.s > 9) and (var.ms > 9)
+debug = "0"+(INT(var.h))+":"+(INT(var.m))+":"+(INT(var.s))+";"+(INT(var.ms))
+elseif (var.h < 9) and (var.m < 9) and (var.s < 9) and (var.ms < 9)
+debug = (INT(var.h))+":"+(INT(var.m))+":"+(INT(var.s))+";"+(INT(var.ms))
+endif
+If var.ms == 1000
+var.s = (var.s + 1) % 1001
+var.ms = 0
+endif
+If var.s == 60
+var.m = (var.m + 1) % 61
+var.s = 0
+endif
+If var.m == 60
+var.h = (var.h + 1) % 25
+var.m = 0
+endif
+If var.h == 24
+var.d = (var.d + 1)
+var.h = 0
+endif

@@ -1,0 +1,30 @@
+﻿PPJoy1.Analog0 = Wiimote1.Classic.LeftStickX
+PPJoy1.Analog1 = Wiimote1.Classic.LeftStickY
+PPJoy1.Digital0 = Wiimote1.Classic.Up
+PPJoy1.Digital1 = Wiimote1.Classic.Down
+PPJoy1.Digital2 = Wiimote1.Classic.Left
+PPJoy1.Digital3 = Wiimote1.Classic.Right
+PPJoy1.Digital4 = Wiimote1.Classic.b
+PPJoy1.Digital5 = Wiimote1.Classic.a
+if(Wiimote1.Classic.RightStickY < (-0.4))
+PPJoy1.Digital6 = true
+else PPJoy1.Digital6 = false
+endif
+if(Wiimote1.Classic.RightStickY > 0.4)
+PPJoy1.Digital7 = true
+else PPJoy1.Digital7 = false
+endif
+if(Wiimote1.Classic.RightStickX < (-0.4))
+PPJoy1.Digital8 = true
+else PPJoy1.Digital8 = false
+endif
+if(Wiimote1.Classic.RightStickX > 0.4)
+PPJoy1.Digital9 = true
+else PPJoy1.Digital9 = false
+endif
+PPJoy1.Digital10 = Wiimote1.Classic.LFull or Wiimote1.Classic.x
+PPJoy1.Digital11 = Wiimote1.Classic.ZL or Wiimote1.Classic.ZR
+PPJoy1.Digital12 = Wiimote1.Classic.RFull
+PPJoy1.Digital13 = Wiimote1.Classic.Plus
+var.x = Wiimote1.Classic.LeftStickX
+var.y = Wiimote1.Classic.LeftStickY

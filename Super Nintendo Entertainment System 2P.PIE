@@ -1,0 +1,66 @@
+//      Wiimote script by BigETI (Ethem Kurt) at 08.06.2009 09:18 pm
+//
+// You must have a Classic Controller!!
+//
+// You can´t use Nunchuk
+//
+//
+//
+// Keys to use this script (Classic Controller)
+//
+// Classic Up Button = SNES Up Button
+// Classic Down Button = SNES Down Button
+// Classic Left Button = SNES Left Button
+// Classic Right Button = SNES Right Button
+// Classic L Button or Classic ZL Button = SNES L Button
+// Classic R Button or Classic ZR Button = SNES R Button
+// Classic Plus Button = SNES Start Button
+// Classic Minus Button = SNES Select Button
+//
+//
+//
+// Scripts (nothing for you)
+//
+//
+//Player 1
+//
+Keyboard.Up = Wiimote1.Classic.Up
+Keyboard.Down = Wiimote1.Classic.Down
+Keyboard.Left = Wiimote1.Classic.Left
+Keyboard.Right = Wiimote1.Classic.Right
+Keyboard.NUMPAD2 = Wiimote1.Classic.b
+Keyboard.NUMPAD6 = Wiimote1.Classic.a
+Keyboard.NUMPAD4 = Wiimote1.Classic.y
+Keyboard.NUMPAD8 = Wiimote1.Classic.x
+Keyboard.NUMPAD0 = Wiimote1.Classic.Plus
+Keyboard.NumPadDot = Wiimote1.Classic.Minus
+Keyboard.NUMPAD1 = (Wiimote1.Classic.LFull or Wiimote1.Classic.ZL)
+Keyboard.NUMPAD3 = (Wiimote1.Classic.RFull or Wiimote1.Classic.ZR)
+Wiimote1.Led1 = Wiimote1.HasClassic or Wiimote1.HasNunchuk
+Wiimote1.Led2 = Wiimote1.HasNunchuk
+Wiimote1.Led3 = Wiimote1.HasNunchuk
+Wiimote1.Led4 = Wiimote1.HasNunchuk
+Wiimote1.Rumble = Wiimote1.HasNunchuk
+endif
+
+
+//Player 2
+//
+Keyboard.W = Wiimote2.Classic.Up
+Keyboard.S = Wiimote2.Classic.Down
+Keyboard.A = Wiimote2.Classic.Left
+Keyboard.D = Wiimote2.Classic.Right
+Keyboard.G = Wiimote2.Classic.b
+Keyboard.H = Wiimote2.Classic.a
+Keyboard.F = Wiimote2.Classic.y
+Keyboard.T = Wiimote2.Classic.x
+Keyboard.X = Wiimote2.Classic.Plus
+Keyboard.Y = Wiimote2.Classic.Minus
+Keyboard.Q = (Wiimote2.Classic.LFull or Wiimote2.Classic.ZL)
+Keyboard.E = (Wiimote2.Classic.RFull or Wiimote2.Classic.ZR)
+Wiimote2.Led1 = Wiimote2.HasNunchuk
+Wiimote2.Led2 = Wiimote2.HasClassic or Wiimote2.HasNunchuk
+Wiimote2.Led3 = Wiimote2.HasNunchuk
+Wiimote2.Led4 = Wiimote2.HasNunchuk
+Wiimote2.Rumble = Wiimote2.HasNunchuk
+endif

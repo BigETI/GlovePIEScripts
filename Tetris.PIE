@@ -1,0 +1,8 @@
+﻿Keyboard.Up = XInput.Up or (XInput.Joy1Y > 0.4)
+Keyboard.Down = XInput.Down or (XInput.Joy1Y < (-0.4))
+Keyboard.Left = XInput.Left or (XInput.Joy1X < (-0.4))
+Keyboard.Right = XInput.Right or (XInput.Joy1X > 0.4)
+Keyboard.Z = XInput.A or XInput.X or XInput.LeftTrigger or XInput.LeftShoulder
+Keyboard.X = XInput.B or XInput.Y or XInput.RightTrigger or XInput.RightShoulder
+Keyboard.C = XInput.LeftThumb
+Keyboard.Escape = XInput.Start

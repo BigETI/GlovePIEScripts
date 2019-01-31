@@ -1,0 +1,37 @@
+Keyboard.X = (Wiimote1.Classic.a or Wiimote1.Classic.b)
+Keyboard.Z = (Wiimote1.Classic.y or Wiimote1.Classic.x)
+Keyboard.A = (Wiimote1.Classic.LFull or Wiimote1.Classic.ZL)
+Keyboard.S = (Wiimote1.Classic.RFull or Wiimote1.Classic.ZR)
+Keyboard.NumPadDot = Wiimote1.Classic.Minus
+Keyboard.NUMPAD0 = Wiimote1.Classic.Plus
+Wiimote1.Led1 = Wiimote1.HasClassic
+
+If (Wiimote1.HasNunchuk == TRUE)
+Wiimote1.Rumble = TRUE
+elseif (Wiimote1.HasNunchuk == FALSE)
+Wiimote1.Rumble = FALSE
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) < (-0.4))
+Keyboard.Up = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) > (-0.4))
+Keyboard.Up = Wiimote1.Classic.Up
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) > 0.4)
+Keyboard.Down = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) < 0.4)
+Keyboard.Down = Wiimote1.Classic.Down
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) < (-0.4))
+Keyboard.Left = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) > (-0.4))
+Keyboard.Left = Wiimote1.Classic.Left
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) > 0.4)
+Keyboard.Right = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) < 0.4)
+Keyboard.Right = Wiimote1.Classic.Right
+endif

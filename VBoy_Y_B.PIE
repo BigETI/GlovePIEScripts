@@ -1,0 +1,16 @@
+Keyboard.Up = (Wiimote1.Classic.Up or (MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1) < (-0.75)))
+Keyboard.Down = (Wiimote1.Classic.Down or (MapRange(Wiimote1.Classic.Joy1Y, -1,1,1 -1,1) > 0.75))
+Keyboard.Left = (Wiimote1.Classic.Left or (MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1) < (-0.75)))
+Keyboard.Right = (Wiimote1.Classic.Right or (MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1) > 0.75))
+Keyboard.F = (MapRange(Wiimote1.Classic.Joy2Y, -1,1, -1,1) < (-0.75))
+Keyboard.V = (MapRange(Wiimote1.Classic.Joy2Y, -1,1, -1,1) > 0.75)
+Keyboard.C = (MapRange(Wiimote1.Classic.Joy2X, -1,1, -1,1) < (-0.75))
+Keyboard.B = (MapRange(Wiimote1.Classic.Joy2X, -1,1, -1,1) > 0.75)
+Keyboard.W = Wiimote1.Classic.Minus
+Keyboard.Q = Wiimote1.Classic.Plus
+Keyboard.A = (Wiimote1.Classic.LFull or Wiimote1.Classic.ZL)
+Keyboard.S = (Wiimote1.Classic.RFull or Wiimote1.Classic.ZR)
+Keyboard.Z = (Wiimote1.Classic.b or Wiimote1.Classic.a)
+Keyboard.X = (Wiimote1.Classic.y or Wiimote1.Classic.x)
+Wiimote1.Led1 = Wiimote1.HasClassic
+Wiimote1.Rumble = Wiimote1.HasNunchuk

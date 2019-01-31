@@ -1,0 +1,129 @@
+//      Wiimote Script by BigETI (Ethem Kurt) at 08.06.2009 07:44 pm
+//
+// Hold your Wiimote sideways
+//
+// If You have a Classic Controller, you can use it ,too!!
+//
+// You can´t use Nunchuk
+//
+//
+//
+// Keys to use this script (without Classic Controller)
+//
+// Up Button = NES Up Button
+// Down Button = NES Down Button
+// Left Button = NES Left Button
+// Right Button = NES Right Button
+// Two Button = NES A Button
+// One Button = NES B Button
+// Plus Button = NES Start Button
+// Minus Button = NES Select Button
+//
+//
+//
+// Keys to use this script (with Classic Controller)
+//
+// Classic Up Button = NES Up Button
+// Classic Down Button = NES Down Button
+// Classic Left Button = NES Left Button
+// Classic Right Button = NES Right Button
+// Classic b Button or a Button = NES A Button
+// Classic y Button or x Button = NES B Button
+// Classic Plus Button = NES Start Button
+// Classic Minus Button = NES Select Button
+//
+//
+//
+// Scripts (nothing for you)
+//
+//
+// Player 1
+//
+Keyboard.W = (Wiimote1.Two and(Wiimote1.HasClassic == FALSE)) or ((Wiimote1.Classic.b or Wiimote1.Classic.a) and (Wiimote1.HasClassic == TRUE))
+Keyboard.Q = (Wiimote1.One and(Wiimote1.HasClassic == FALSE)) or ((Wiimote1.Classic.x or Wiimote1.Classic.y) and (Wiimote1.HasClassic == TRUE))
+Keyboard.NUMPAD0 = (Wiimote1.Plus and (Wiimote1.HasClassic == FALSE)) or (Wiimote1.Classic.Plus and (Wiimote1.HasClassic == TRUE))
+Keyboard.NumPadDot = (Wiimote1.Minus and (Wiimote1.HasClassic == FALSE)) or (Wiimote1.Classic.Minus and (Wiimote1.HasClassic == TRUE))
+endif
+
+If (Wiimote1.HasNunchuk == TRUE)
+Wiimote1.Led1 = FALSE
+Wiimote1.Rumble = TRUE
+elseif (Wiimote1.HasNunchuk == FALSE)
+Wiimote1.Led1 = TRUE
+Wiimote1.Rumble = FALSE
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) < (-0.4))
+Keyboard.Up = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) > (-0.4))
+Keyboard.Up = (Wiimote1.Right and ((Wiimote1.HasClassic == FALSE) and (Wiimote1.HasNunchuk == FALSE))) or (Wiimote1.Classic.Up and ((Wiimote1.HasClassic == TRUE) and (Wiimote1.HasNunchuk == FALSE)))
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) > 0.4)
+Keyboard.Down = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) < 0.4)
+Keyboard.Down = (Wiimote1.Left and ((Wiimote1.HasClassic == FALSE) and (Wiimote1.HasNunchuk == FALSE))) or (Wiimote1.Classic.Down and ((Wiimote1.HasClassic == TRUE) and (Wiimote1.HasNunchuk == FALSE)))
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) < (-0.4))
+Keyboard.Left = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) > (-0.4))
+Keyboard.Left = (Wiimote1.Up and ((Wiimote1.HasClassic == FALSE) and (Wiimote1.HasNunchuk == FALSE))) or (Wiimote1.Classic.Left and ((Wiimote1.HasClassic == TRUE) and (Wiimote1.HasNunchuk == FALSE)))
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) > 0.4)
+Keyboard.Right = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) < 0.4)
+Keyboard.Right = (Wiimote1.Down and ((Wiimote1.HasClassic == FALSE) and (Wiimote1.HasNunchuk == FALSE))) or (Wiimote1.Classic.Right and ((Wiimote1.HasClassic == TRUE) and (Wiimote1.HasNunchuk == FALSE)))
+endif
+//
+//
+//Player 2
+//
+Keyboard.N = (Wiimote2.Two and (Wiimote2.HasClassic == FALSE)) or ((Wiimote2.Classic.b or Wiimote2.Classic.a) and (Wiimote2.HasClassic == TRUE))
+Keyboard.B = (Wiimote2.One and (Wiimote2.HasClassic == FALSE)) or ((Wiimote2.Classic.x or Wiimote2.Classic.y) and (Wiimote2.HasClassic == TRUE))
+Keyboard.X = (Wiimote2.Plus and (Wiimote2.HasClassic == FALSE)) or (Wiimote2.Classic.Plus and (Wiimote2.HasClassic == TRUE))
+Keyboard.Y = (Wiimote2.Minus and (Wiimote2.HasClassic == FALSE)) or (Wiimote2.Classic.Minus and (Wiimote2.HasClassic == TRUE))
+endif
+
+If (Wiimote2.HasNunchuk == TRUE)
+Wiimote2.Led2 = FALSE
+Wiimote2.Rumble = TRUE
+elseif (Wiimote2.HasNunchuk == FALSE)
+Wiimote2.Led2 = TRUE
+Wiimote2.Rumble = FALSE
+endif
+
+If ((MapRange(Wiimote2.Classic.Joy1Y, -1,1, -1,1)) < (-0.4))
+Keyboard.A = TRUE
+elseif ((MapRange(Wiimote2.Classic.Joy1Y, -1,1, -1,1)) > (-0.4))
+Keyboard.A = (Wiimote2.Right and ((Wiimote2.HasClassic == FALSE) and (Wiimote2.HasNunchuk == FALSE))) or (Wiimote2.Classic.Up and ((Wiimote2.HasClassic == TRUE) and (Wiimote2.HasNunchuk == FALSE)))
+endif
+
+If ((MapRange(Wiimote2.Classic.Joy1Y, -1,1, -1,1)) > 0.4)
+Keyboard.D = TRUE
+elseif ((MapRange(Wiimote2.Classic.Joy1Y, -1,1, -1,1)) < 0.4)
+Keyboard.D = (Wiimote2.Left and ((Wiimote2.HasClassic == FALSE) and (Wiimote2.HasNunchuk == FALSE))) or (Wiimote2.Classic.Down and ((Wiimote2.HasClassic == TRUE) and (Wiimote2.HasNunchuk == FALSE)))
+endif
+
+If ((MapRange(Wiimote2.Classic.Joy1X, -1,1, -1,1)) < (-0.4))
+Keyboard.C = TRUE
+elseif ((MapRange(Wiimote2.Classic.Joy1X, -1,1, -1,1)) > (-0.4))
+Keyboard.C = (Wiimote2.Up and ((Wiimote2.HasClassic == FALSE) and (Wiimote2.HasNunchuk == FALSE))) or (Wiimote2.Classic.Left and ((Wiimote2.HasClassic == TRUE) and (Wiimote2.HasNunchuk == FALSE)))
+endif
+
+If ((MapRange(Wiimote2.Classic.Joy1X, -1,1, -1,1)) > 0.4)
+Keyboard.NUMPAD8 = TRUE
+elseif ((MapRange(Wiimote2.Classic.Joy1X, -1,1, -1,1)) < 0.4)
+Keyboard.NUMPAD8 = (Wiimote2.Down and ((Wiimote2.HasClassic == FALSE) and (Wiimote2.HasNunchuk == FALSE))) or (Wiimote2.Classic.Right and ((Wiimote2.HasClassic == TRUE) and (Wiimote2.HasNunchuk == FALSE)))
+endif
+
+If ((Wiimote1.HasNunchuk == FALSE) and (Wiimote2.HasNunchuk == FALSE))
+debug = "Player 1 OK / Player 2 OK"
+elseif ((Wiimote1.HasNunchuk == TRUE) and (Wiimote2.HasNunchuk == FALSE))
+debug = "Player 1 You can´t use it / Player 2 OK"
+elseif ((Wiimote1.HasNunchuk == FALSE) and (Wiimote2.HasNunchuk == TRUE))
+debug = "Player 1 OK / Player 2 You can´t use it"
+elseif ((Wiimote1.HasNunchuk == TRUE) and (Wiimote2.HasNunchuk == TRUE))
+debug = "HAHA"
+endif

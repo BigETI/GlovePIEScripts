@@ -1,0 +1,35 @@
+﻿if(Wiimote1.PluggedIn)
+if(Wiimote1.HasClassic)
+if(Wiimote1.Classic.LeftStickY < (-0.4) or Wiimote1.Classic.Up)
+Key.Up = true
+else
+Key.Up = false
+endif
+if(Wiimote1.Classic.LeftStickY > 0.4 or Wiimote1.Classic.Down)
+Key.Down = true
+else
+Key.Down = false
+endif
+if(Wiimote1.Classic.LeftStickX < (-0.4) or Wiimote1.Classic.Left)
+Key.Left = true
+else
+Key.Left = false
+endif
+if(Wiimote1.Classic.LeftStickX > 0.4 or Wiimote1.Classic.Right)
+Key.Right = true
+else
+Key.Right = false
+endif
+Key.NumPadDot = Wiimote1.Classic.Minus
+Key.Escape = Wiimote1.Classic.Plus
+Key.NUMPAD2 = Wiimote1.Classic.b
+Key.NUMPAD4 = Wiimote1.Classic.y
+Key.NUMPAD6 = Wiimote1.Classic.a
+Key.NUMPAD8 = Wiimote1.Classic.x
+Debug = "Ready!"
+else
+Debug = "Please use the Classic Controller."
+endif
+else
+Debug = "Please connect the Wiimote with this computer!"
+endif

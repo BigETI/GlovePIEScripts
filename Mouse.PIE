@@ -1,0 +1,25 @@
+﻿var.a = XInput.Joy1X
+if(XInput.Exists)
+ var.factor = 25.0-(XInput.RightTrigger*20.0)
+ if((XInput.Joy1X >= 0.05) or (XInput.Joy1X <= (-0.05)))
+  Mouse.DirectInputX += (XInput.Joy1X*var.factor)
+ endif
+ if((XInput.Joy1Y >= 0.05) or (XInput.Joy1Y <= (-0.05)))
+  Mouse.DirectInputY -= (XInput.Joy1Y*var.factor)
+ endif
+ if(Xinput.LeftThumb)
+  if((XInput.Joy2X >= 0.05) or (XInput.Joy2X <= (-0.05)))
+   Mouse.DirectInputX += (XInput.Joy2X*(var.factor*5.0))
+  endif
+  if((XInput.Joy2Y >= 0.05) or (XInput.Joy2Y <= (-0.05)))
+   Mouse.DirectInputY -= (XInput.Joy2Y*(var.factor*5.0))
+  endif
+ else
+  Mouse.WheelUp = (XInput.Joy2Y >= 0.4)
+  Mouse.WheelDown -= (XInput.Joy2Y <= (-0.4))
+  endif
+ endif
+ Mouse.LeftButton = XInput.B or XInput.A
+ Mouse.RightButton = XInput.Y or XInput.X
+ Mouse.MiddleButton = XInput.LeftShoulder or XInput.RightShoulder
+endif

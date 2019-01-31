@@ -1,0 +1,8 @@
+﻿Key.Up = Wiimote1.Classic.Right
+Key.Down = Wiimote1.Left
+Key.Left = Wiimote1.Up
+Key.Right = Wiimote1.Down
+Key.Z = Wiimote1.One
+Key.X = Wiimote1.Two
+Key.NUMPAD0 = Wiimote.Plus
+Key.NumPadDot = Wiimote1.Minus

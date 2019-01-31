@@ -1,0 +1,54 @@
+// *--------------+-----------------------------*-----------------------------*
+// | Programmname | SR_Sensortest_v1_0          | http://SelbstbauRoboter.com |
+// | Version      | 1.0                         *-----------------------------|
+// | Hardware     | RCX, CM                                                   |
+// | Copyright(c) | Uwe Bergmann, Norderstedt, Germany 2006                   |
+// *--------------+-----------------------------------------------------------*
+// | Aktoren      | keine                                                     |
+// | Sensoren     | Alle 3 Sensoreingänge sind mit Tastsensoren belegt        |
+// *--------------+-----------------------------------------------------------*
+// Funktionen
+// ----------
+// Sensor am Sensoreingang1 drücken -> 1 Beep
+// Sensor am Sensoreingang2 drücken -> 2 Beep
+// Sensor am Sensoreingang3 drücken -> 3 Beep
+//============================================================================*
+//
+// -------Definitionen für Morsezeichen
+//        Tonhöhe "A" = 440
+#define __Ton  440
+#define __Morsekurz  15
+//        Morselang = 3 * Morsekurz
+#define __Morselang  45
+//        MorseZeichenende = 3 * Morsekurz
+#define __MorseZeichenende  45
+//        MorseWortende = 7 * Morsekurz
+#define __MorseWortende  105
+
+task main()
+{
+    SetSensorMode(SENSOR_1, SENSOR_MODE_RAW); // raw mode
+    SetSensorMode(SENSOR_2, SENSOR_MODE_RAW); // raw mode
+    SetSensorMode(SENSOR_3, SENSOR_MODE_RAW); // raw mode
+    while (true)
+  {
+    if (SENSOR_1 < 300)
+    {
+       PlayTone(__Ton,__Morselang);
+       Wait(100);
+    }
+    if (SENSOR_2 < 300)
+    {
+       PlayTone(__Ton,__Morselang); Wait(__Morselang+__Morsekurz);
+       PlayTone(__Ton,__Morselang); Wait(__Morselang+__Morsekurz);
+       Wait(100);
+    }
+    if (SENSOR_3 < 300)
+    {
+       PlayTone(__Ton,__Morselang); Wait(__Morselang+__Morsekurz);
+       PlayTone(__Ton,__Morselang); Wait(__Morselang+__Morsekurz);
+       PlayTone(__Ton,__Morselang); Wait(__Morselang+__Morsekurz);
+       Wait(100);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+﻿if(Wiimote1.Classic.LeftStickY < (-0.4) or Wiimote1.Classic.Up)
+Key.Up = true
+else
+Key.Up = false
+endif
+if(Wiimote1.Classic.LeftStickY > 0.4 or Wiimote1.Classic.Down)
+Key.Down = true
+else
+Key.Down = false
+endif
+if(Wiimote1.Classic.LeftStickX < (-0.4) or Wiimote1.Classic.Left)
+Key.Left = true
+else
+Key.Left = false
+endif
+if(Wiimote1.Classic.LeftStickX > 0.4 or Wiimote1.Classic.Right)
+Key.Right = true
+else
+Key.Right = false
+endif
+Key.NUMPAD0 = Wiimote1.Classic.Plus
+Key.NumPadDot = Wiimote1.Classic.Minus
+Key.NUMPAD2 = Wiimote1.Classic.b
+Key.NUMPAD6 = Wiimote1.Classic.a
+Key.NUMPAD4 = Wiimote1.Classic.y
+Key.NUMPAD8 = Wiimote1.Classic.x
+Key.NUMPAD1 = Wiimote1.Classic.LFull or Wiimote1.Classic.ZL
+Key.NUMPAD3 = Wiimote1.Classic.RFull or Wiimote1.Classic.ZR
+Key.NUMPAD5 = Wiimote1.Classic.Home
+if(Wiimote1.Classic.RightStickY < (-0.4))
+Key.NUMPAD7 = true
+else
+Key.NUMPAD7 = false
+endif

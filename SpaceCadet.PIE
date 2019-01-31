@@ -1,0 +1,12 @@
+﻿Key.A = XInput.Left or (XInput.LeftStickX < -0.2)
+Key.D = XInput.Right or (XInput.LeftStickX > 0.2)
+Key.Q = XInput.LeftShoulder
+Key.E = XInput.RightShoulder
+Key.X = XInput.Back
+Key.Space = XInput.A or XInput.B or XInput.X or XInput.Y
+Key.F3 = XInput.Start
+
+
+
+
+

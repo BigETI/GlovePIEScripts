@@ -1,0 +1,27 @@
+﻿/**
+ ** Beam Youplay XInput to PS2 made by BigETI
+ **/
+Key.NUMPAD8 = XInput.Up
+Key.NUMPAD2 = XInput.Down
+Key.NUMPAD4 = XInput.Left
+Key.NUMPAD6 = XInput.Right
+Key.Up = (XInput.LeftStickY > 0.2)
+Key.Down = (XInput.LeftStickY < -0.2)
+Key.Left = (XInput.LeftStickX < -0.2)
+Key.Right = (XInput.LeftStickX > 0.2)
+Key.W = (XInput.RightStickY > 0.2)
+Key.S = (XInput.RightStickY < -0.2)
+Key.A = (XInput.RightStickX < -0.2)
+Key.D = (XInput.RightStickX > 0.2)
+Key.X = XInput.A
+Key.V = XInput.B
+Key.C = XInput.Y
+Key.Y = XInput.X
+Key.F = XInput.LeftShoulder
+Key.B = XInput.RightShoulder
+Key.Enter = XInput.Start
+Key.Space = XInput.Back
+Key.H = XInput.LeftThumb
+Key.M = XInput.RightThumb
+Key.G = XInput.LeftTrigger
+Key.N = XInput.RightTrigger

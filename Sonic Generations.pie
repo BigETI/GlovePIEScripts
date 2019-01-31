@@ -1,0 +1,40 @@
+﻿if(Wiimote1.PluggedIn)
+if(Wiimote1.HasClassic and Wiimote1.HasNunchuk == false)
+if(Wiimote1.Classic.LeftStickY < (-0.4) or Wiimote1.Classic.Up)
+PPJoy1.Digital0 = true
+else
+PPJoy1.Digital0 = false
+endif
+if(Wiimote1.Classic.LeftStickY > 0.4 or Wiimote1.Classic.Down)
+PPJoy1.Digital1 = true
+else
+PPJoy1.Digital1 = false
+endif
+if(Wiimote1.Classic.LeftStickX < (-0.4) or Wiimote.Classic.Left)
+PPJoy1.Digital2 = true
+else
+PPJoy1.Digital2 = false
+endif
+if(Wiimote1.Classic.LeftStickX > 0.4 or Wiimote.Classic.Right)
+PPJoy1.Digital3 = true
+else
+PPJoy1.Digital3 = false
+endif
+PPJoy1.Digital4 = Wiimote1.Classic.b
+PPJoy1.Digital5 = Wiimote1.Classic.a
+PPJoy1.Digital6 = Wiimote1.Classic.y
+PPJoy1.Digital7 = Wiimote1.Classic.x
+PPJoy1.Digital8 = Wiimote1.Classic.LFull
+PPJoy1.Digital9 = Wiimote1.Classic.RFull
+PPJoy1.Digital10 = Wiimote1.Classic.ZL
+PPJoy1.Digital11 = Wiimote1.Classic.ZR
+PPJoy1.Digital12 = Wiimote1.Classic.Plus
+PPJoy1.Digital13 = Wiimote1.Classic.Minus
+debug = "Ready! Battery: "+((Wiimote1.Battery/128)*100)+"%"
+else
+debug = "Please use a Classic Controller. Battery: "+((Wiimote1.Battery/128)*100)+"%"
+endif
+else
+debug = "Please connect a Wiimote first."
+endif
+

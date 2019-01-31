@@ -1,0 +1,58 @@
+﻿var.factor = 15.0
+if(XInput.Exists)
+ if((XInput.Joy2X < (-0.1)) or (XInput.Joy2X > 0.1))
+  Mouse.DirectInputX += (XInput.Joy2X*var.factor)
+ endif
+ if((XInput.Joy2Y < (-0.1)) or (XInput.Joy2Y > 0.1))
+  //if(var.mode)
+   Mouse.DirectInputY -= (XInput.Joy2Y*var.factor)
+  //else
+   //Mouse.DirectInputY -= (XInput.Joy2Y*var.factor)
+  //endif
+ endif
+ if(var.mode)
+  if(XInput.Joy1Y > 0.4 or XInput.Up)
+   W = true
+  else
+   W = false
+  endif
+  if(XInput.Joy1Y < (-0.4) or XInput.Down)
+   S = true
+  else
+   S = false
+  endif
+  if((XInput.Joy1X < (-0.4)) or (XInput.Joy1X > 0.4))
+   Mouse.DirectInputX += (XInput.Joy1X*var.factor)
+  endif
+ else
+  if((XInput.Joy1Y < (-0.1)) or (XInput.Joy1Y > 0.1))
+   Mouse.DirectInputY += (XInput.Joy1Y*var.factor)
+  endif
+  if((XInput.Joy1X < (-0.1)) or (XInput.Joy1X > 0.1))
+   Mouse.DirectInputX += (XInput.Joy1X*var.factor)
+  endif
+ endif
+ A = XInput.Left
+ D = XInput.Right
+ Mouse.LeftButton = XInput.B
+ Mouse.RightButton = XInput.Y
+ Mouse.MiddleButton = XInput.Back
+ Key.Space = XInput.A
+ Key.Shift = XInput.X
+ Mouse.WheelUp = Clicked(XInput.LeftTrigger)
+ Mouse.WheelDown = Clicked(XInput.RightTrigger)
+ Q = XInput.RightShoulder
+ E = XInput.LeftShoulder
+ Key.Tab = XInput.ExtraButton1
+ Key.Escape = XInput.Start
+ if(DoubleClicked(XInput.LeftThumb))
+  if(var.mode)
+   var.mode = false
+   midi.HiBongo = true
+  else
+   var.mode = true
+   midi.LowBongo = true
+  endif
+ endif
+//Debug = "Classic Controller Mode; Battery: "+((Wiimote1.Battery/128)*100)+"%"
+endif

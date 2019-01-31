@@ -1,0 +1,57 @@
+﻿if true
+    if var.isDown == false
+        var.isDown = false
+        if XInput.Up == true
+            var.W = true
+            var.isDown = true
+        endif
+        if XInput.Down == true
+            var.S = true
+            var.isDown = true
+        endif
+        if XInput.Left == true
+            var.A = true
+            var.isDown = true
+        endif
+        if XInput.Right == true
+            var.D = true
+            var.isDown = true
+        endif
+        if XInput.A == true
+            var.F = true
+            var.isDown = true
+        endif
+        if XInput.Y == true
+            var.isDown = true
+        endif
+        if var.isDown == true
+            Keyboard.W = var.W
+            Keyboard.S = var.S
+            Keyboard.A = var.A
+            Keyboard.D = var.D
+            Keyboard.F = var.F
+            Keyboard.Enter = true
+            Keyboard.W = false
+            Keyboard.S = false
+            Keyboard.A = false
+            Keyboard.D = false
+            Keyboard.F = false
+            Keyboard.NUMPAD4 = false
+            Keyboard.NUMPAD2 = false
+            Keyboard.Q = false
+            Keyboard.Enter = false
+            var.W = false
+            var.S = false
+            var.A = false
+            var.D = false
+            var.F = false
+            var.easterEgg = false
+            var.Q = false
+        endif
+    else
+        if XInput.Up == false and XInput.Down == false and XInput.Left == false and XInput.Right == false and XInput.A == false
+            var.isDown = false
+        endif
+    endif
+endif
+

@@ -1,0 +1,12 @@
+Keyboard.Up = (Wiimote1.Classic.Up or ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) < (-0.4)))
+Keyboard.Down = (Wiimote1.Classic.Down or ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) > (0.4)))
+Keyboard.Left = (Wiimote1.Classic.Left or ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) < (-0.4)))
+Keyboard.Right = (Wiimote1.Classic.Right or ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) > (0.4)))
+Keyboard.A = Wiimote1.Classic.a
+Keyboard.S = Wiimote1.Classic.b
+Keyboard.D = (Wiimote1.Classic.ZL or Wiimote1.Classic.ZR)
+Keyboard.Q = Wiimote1.Classic.RFull
+Keyboard.W = Wiimote1.Classic.y
+Keyboard.E = Wiimote1.Classic.x
+Keyboard.Space = Wiimote1.Classic.Plus
+Wiimote1.Led1 = TRUE

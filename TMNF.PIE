@@ -1,0 +1,25 @@
+PPJoy1.Analog3 = (MapRange(Wiimote1.Classic.Joy2Y, -1,1, -1,1))
+PPJoy1.Digital0 = ((Wiimote1.Two and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.A and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Classic.a and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE))))
+PPJoy1.Digital1 = ((Wiimote1.One and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.B and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Classic.b and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE))))
+PPJoy1.Digital2 = ((Wiimote1.Minus and (Wiimote1.HasClassic == FALSE)) or Wiimote1.Classic.Minus)
+PPJoy1.Digital4 = ((Wiimote1.B and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Nunchuk.ZButton and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or ((Wiimote1.Classic.ZR or Wiimote1.Classic.LFull) and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE))))
+PPJoy1.Digital5 = ((Wiimote1.A and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.One and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Classic.ZL and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE))))
+PPJoy1.Digital6 = ((Wiimote1.Nunchuk.CButton and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Classic.RFull and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE))))
+PPJoy1.Digital7 = ((Wiimote1.Home and (Wiimote1.HasClassic == FALSE)) or Wiimote1.Classic.Home)
+PPJoy1.Digital8 = ((Wiimote1.Plus and (Wiimote1.HasClassic == FALSE)) or Wiimote1.Classic.Plus)
+PPJoy1.Digital9 = (Wiimote1.Up and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Left and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Classic.Left and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE)))
+PPJoy1.Digital10 = (Wiimote1.Left and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Down and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Classic.Down and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE)))
+PPJoy1.Digital11 = (Wiimote1.Down and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Right and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Classic.Right and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE)))
+PPJoy1.Digital12 = (Wiimote1.Right and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Up and ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))) or (Wiimote1.Classic.Up and ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE)))
+Wiimote1.Led1 = TRUE
+
+If ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))
+PPJoy1.Analog0 = ((MapRange(Wiimote1.Pitch, -1,1, -1,1)) / 50)
+debug = "Wii-Wheel"
+elseif ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))
+PPJoy1.Analog0 = (MapRange(Wiimote1.Nunchuk.JoyX, -1,1, -1,1))
+debug = "Wii-Fernbedienung mit Nunchuk"
+elseif ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE))
+PPJoy1.Analog0 = (MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1))
+debug = "Classic Controller"
+endif

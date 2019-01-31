@@ -1,0 +1,106 @@
+﻿/*
+  Minecraft 1.8 and above Wiimote script made by BigETI.
+  Please use a Wii Classic Controller to play this game.
+  For a better gameplay double click the Home button of your Classic Controller to get a better camera gameplay.
+  Double click again to return back to normal mouse movement.
+
+  Configuration:
+  
+   - Up/Down/Left/Right: Left Analog Stick (includes a minor camera movement support) or D-Pad
+   - Gameplay switch (Mouse mode/Play mode): Home button (doubleclicked!)
+   - List players (Only online!): Home button
+   - Camera Move: Right Analog Stick
+   - Attack: A button
+   - Use item: X button
+   - Jump: B button
+   - Sneak: Y button
+   - Pick block: Minus button
+   - Inventory: ZL button
+   - Drop: ZR button
+   - Switch items: L or R button
+*/
+
+if(Wiimote1.PluggedIn)
+if(Wiimote1.HasClassic)
+if(Wiimote1.Classic.RightStickX < (-0.1))
+Mouse.VirtualDesktopX = (Screen.CursorPosX/Screen.Width)+(Wiimote1.Classic.RightStickX/50)
+endif
+if(Wiimote1.Classic.RightStickX > 0.1)
+Mouse.VirtualDesktopX = (Screen.CursorPosX/Screen.Width)+(Wiimote1.Classic.RightStickX/50)
+endif
+if(Wiimote1.Classic.RightStickY < (-0.1))
+if(var.mode)
+Mouse.VirtualDesktopY = (Screen.CursorPosY/Screen.Height)-(Wiimote1.Classic.RightStickY/50)
+else
+Mouse.VirtualDesktopY = (Screen.CursorPosY/Screen.Height)+(Wiimote1.Classic.RightStickY/50)
+endif
+endif
+if(Wiimote1.Classic.RightStickY > 0.1)
+if(var.mode)
+Mouse.VirtualDesktopY = (Screen.CursorPosY/Screen.Height)-(Wiimote1.Classic.RightStickY/50)
+else
+Mouse.VirtualDesktopY = (Screen.CursorPosY/Screen.Height)+(Wiimote1.Classic.RightStickY/50)
+endif
+endif
+if(var.mode)
+if(Wiimote1.Classic.LeftStickY < (-0.4) or Wiimote1.Classic.Up)
+W = true
+else
+W = false
+endif
+if(Wiimote1.Classic.LeftStickY > 0.4 or Wiimote1.Classic.Down)
+S = true
+else
+S = false
+endif
+if(Wiimote1.Classic.LeftStickX < (-0.4))
+Mouse.VirtualDesktopX = (Screen.CursorPosX/Screen.Width)+(Wiimote1.Classic.LeftStickX/55)
+endif
+if(Wiimote1.Classic.LeftStickX > 0.4)
+Mouse.VirtualDesktopX = (Screen.CursorPosX/Screen.Width)+(Wiimote1.Classic.LeftStickX/55)
+endif
+else
+if(Wiimote1.Classic.LeftStickY < (-0.1))
+Mouse.VirtualDesktopY = (Screen.CursorPosY/Screen.Height)+(Wiimote1.Classic.LeftStickY/50)
+endif
+if(Wiimote1.Classic.LeftStickY > 0.1)
+Mouse.VirtualDesktopY = (Screen.CursorPosY/Screen.Height)+(Wiimote1.Classic.LeftStickY/50)
+endif
+if(Wiimote1.Classic.LeftStickX < (-0.1))
+Mouse.VirtualDesktopX = (Screen.CursorPosX/Screen.Width)+(Wiimote1.Classic.LeftStickX/50)
+endif
+if(Wiimote1.Classic.LeftStickX > 0.1)
+Mouse.VirtualDesktopX = (Screen.CursorPosX/Screen.Width)+(Wiimote1.Classic.LeftStickX/50)
+endif
+endif
+A = Wiimote1.Classic.Left
+D = Wiimote1.Classic.Right
+Mouse.LeftButton = Wiimote1.Classic.a
+Mouse.RightButton = Wiimote1.Classic.x
+Mouse.MiddleButton = Wiimote1.Classic.Minus
+Key.Space = Wiimote1.Classic.b
+Key.Shift = Wiimote1.Classic.y
+Mouse.WheelUp = Clicked(Wiimote1.Classic.LFull)
+Mouse.WheelDown = Clicked(Wiimote1.Classic.RFull)
+Q = Wiimote1.Classic.ZR
+E = Wiimote1.Classic.ZL
+Key.Tab = Wiimote1.Classic.Home
+Key.Escape = Wiimote1.Classic.Plus
+if(DoubleClicked(Wiimote1.Classic.Home))
+if(var.mode == false)
+var.mode = true
+Wiimote1.Leds = 15
+midi.LowBongo = true
+else
+var.mode = false
+Wiimote1.Leds = 1
+midi.HiBongo = true
+endif
+endif
+Debug = "Classic Controller Mode; Battery: "+((Wiimote1.Battery/128)*100)+"%"
+else
+Debug = "Please use the Classic Controller to play. Battery: "+((Wiimote1.Battery/128)*100)+"%"
+endif
+else
+Debug = "Please connect a Wiimote to this computer."
+endif

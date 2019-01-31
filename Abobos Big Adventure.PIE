@@ -1,0 +1,7 @@
+﻿Key.S = XInput.X or XInput.Y
+Key.A = XInput.A or XInput.B
+Key.Up = XInput.Up or (XInput.LeftStickY > 0.1)
+Key.Down = XInput.Down or (XInput.LeftStickY < -0.1)
+Key.Left = XInput.Left or (XInput.LeftStickX < -0.1)
+Key.Right = XInput.Right or (XInput.LeftStickX > 0.1)
+

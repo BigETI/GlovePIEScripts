@@ -1,0 +1,13 @@
+﻿Key.Up = XInput.Up
+Key.Down = XInput.Down
+Key.Left = XInput.Left
+Key.Right = XInput.Right
+Key.C = XInput.A
+Key.X = XInput.B
+Key.Y = XInput.Y
+Key.S = XInput.X
+Key.A = XInput.LeftShoulder
+Key.D = XInput.RightShoulder
+Key.Enter = XInput.Start
+Key.Space = XInput.Back
+

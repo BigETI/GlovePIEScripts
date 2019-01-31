@@ -1,0 +1,11 @@
+﻿Keyboard.X = XInput.X or XInput.Y
+Keyboard.Y = XInput.A
+Keyboard.C = XInput.B
+Keyboard.Enter = XInput.Start
+Keyboard.A = XInput.Back
+Keyboard.Left = XInput.Left or (XInput.LeftStickX < (-0.2))
+Keyboard.Right = XInput.Right or (XInput.LeftStickX > 0.2)
+Keyboard.Up = XInput.Up or (XInput.LeftStickY > 0.2)
+Keyboard.Down = XInput.Down or (XInput.LeftStickY < (-0.2))
+
+

@@ -1,0 +1,106 @@
+﻿if true then
+midi1.e5 = true
+wait 0.5
+midi1.b4 = true
+wait 0.25
+midi1.c5 = true
+wait 0.25
+midi1.d5 = true
+wait 0.5
+midi1.c5 = true
+wait 0.25
+midi1.b4 = true
+wait 0.25
+midi1.a4 = true
+wait 0.5
+midi1.a4 = true
+wait 0.25
+midi1.c5 = true
+wait 0.25
+midi1.e5 = true
+wait 0.5
+midi1.d5 = true
+wait 0.25
+midi1.c5 = true
+wait 0.25
+midi1.b4 = true
+wait 0.75
+midi1.c5 = true
+wait 0.25
+midi1.d5 = true
+wait 0.5
+midi1.e5 = true
+wait 0.5
+midi1.c5 = true
+wait 0.5
+midi1.a4 = true
+wait 0.5
+midi1.a4 = true
+wait 1
+midi1.d5 = true
+wait 0.5
+midi1.f5 = true
+wait 0.25
+midi1.a5 = true
+wait 0.5
+midi1.g5 = true
+wait 0.25
+midi1.f5 = true
+wait 0.25
+midi1.e5 = true
+wait 0.75
+midi1.b4 = true
+wait 0.25
+midi1.e5 = true
+wait 0.5
+midi1.d5 = true
+wait 0.25
+midi1.c5 = true
+wait 0.25
+midi1.b4 = true
+wait 0.75
+midi1.c5 = true
+wait 0.25
+midi1.d5 = true
+wait 0.5
+midi1.e5 = true
+wait 0.5
+midi1.c5 = true
+wait 0.5
+midi1.a4 = true
+wait 0.5
+midi1.a4 = true
+wait 1
+midi1.e5 = true
+wait 1
+midi1.c5 = true
+wait 1
+midi1.d5 = true
+wait 1
+midi1.b4 = true
+wait 1
+midi1.c5 = true
+wait 1
+midi1.a4 = true
+wait 1
+midi1.g4 = true
+wait 1
+midi1.b4 = true
+wait 1
+midi1.e5 = true
+wait 1
+midi1.c5 = true
+wait 1
+midi1.d5 = true
+wait 1
+midi1.b4 = true
+wait 1
+midi1.c5 = true
+wait 0.5
+midi1.e5 = true
+wait 0.5
+midi1.a5 = true
+wait 1
+midi1.g5 = true
+wait 2
+endif

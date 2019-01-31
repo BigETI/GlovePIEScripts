@@ -1,0 +1,13 @@
+﻿Wiimote.Leds = 1
+Key.Up = Wiimote.Classic.Up or (Wiimote.Classic.LeftStickY <= -0.4)
+Key.Down = Wiimote.Classic.Down or (Wiimote.Classic.LeftStickY >= 0.4)
+Key.Left = Wiimote.Classic.Left or (Wiimote.Classic.LeftStickX <= -0.4)
+Key.Right = Wiimote.Classic.Right or (Wiimote.Classic.LeftStickX >= 0.4)
+Key.Enter = Wiimote.Classic.a or Wiimote.Classic.x
+Key.Space = Wiimote.Classic.b or Wiimote.Classic.y
+Key.NUMPAD1 = Wiimote.Classic.LFull or Wiimote.Classic.ZL
+Key.NUMPAD3 = Wiimote.Classic.RFull or Wiimote.Classic.ZR
+Key.Escape = Wiimote.Classic.Plus
+
+
+

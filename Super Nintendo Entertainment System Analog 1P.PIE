@@ -1,0 +1,73 @@
+//      Wiimote script by BigETI (Ethem Kurt) at 08.06.2009 09:18 pm
+//
+// You must have a Classic Controller!!
+//
+// You can´t use Nunchuk
+//
+//
+//
+// Keys to use this script (Classic Controller)
+//
+// Classic Up Button = SNES Up Button
+// Classic Down Button = SNES Down Button
+// Classic Left Button = SNES Left Button
+// Classic Right Button = SNES Right Button
+// Classic L Button or Classic ZL Button = SNES L Button
+// Classic R Button or Classic ZR Button = SNES R Button
+// Classic Plus Button = SNES Start Button
+// Classic Minus Button = SNES Select Button
+//
+//
+//
+// Scripts (nothing for you)
+//
+//
+//Player 1
+//
+Keyboard.NUMPAD2 = Wiimote1.Classic.b
+Keyboard.NUMPAD6 = Wiimote1.Classic.a
+Keyboard.NUMPAD4 = Wiimote1.Classic.y
+Keyboard.NUMPAD8 = Wiimote1.Classic.x
+Keyboard.NUMPAD0 = Wiimote1.Classic.Plus
+Keyboard.NumPadDot = Wiimote1.Classic.Minus
+Keyboard.NUMPAD1 = (Wiimote1.Classic.LFull or Wiimote1.Classic.ZL)
+Keyboard.NUMPAD3 = (Wiimote1.Classic.RFull or Wiimote1.Classic.ZR)
+Wiimote1.Led1 = Wiimote1.HasClassic or Wiimote1.HasNunchuk
+Wiimote1.Led2 = Wiimote1.HasNunchuk
+Wiimote1.Led3 = Wiimote1.HasNunchuk
+Wiimote1.Led4 = Wiimote1.HasNunchuk
+Wiimote1.Rumble = Wiimote1.HasNunchuk
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) < (-0.4))
+Keyboard.Up = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) > (-0.4))
+Keyboard.Up = Wiimote1.Classic.Up
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) > 0.4)
+Keyboard.Down = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1)) < 0.4)
+Keyboard.Down = Wiimote1.Classic.Down
+endif
+
+
+If ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) < (-0.4))
+Keyboard.Left = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) > (-0.4))
+Keyboard.Left = Wiimote1.Classic.Left
+endif
+
+If ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) > 0.4)
+Keyboard.Right = TRUE
+elseif ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1)) < 0.4)
+Keyboard.Right = Wiimote1.Classic.Right
+endif
+
+If ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))
+debug = "You need a Classic Controller"
+elseif ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))
+debug = "You can´t use it"
+elseif ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE))
+debug = "OK"
+endif

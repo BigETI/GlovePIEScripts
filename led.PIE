@@ -1,0 +1,97 @@
+If (Clicked(Wiimote1.Right == TRUE))
+var.a = var.a + 1
+endif
+If (Clicked(Wiimote1.Left == TRUE))
+var.a = var.a - 1
+endif
+If var.a == -1
+var.a = 19
+endif
+If var.a == 0
+Wiimote1.Leds = 0
+debug = "(_)(_)(_)(_)"
+endif
+If var.a == 1
+Wiimote1.Leds = 1
+debug = "(O)(_)(_)(_)"
+endif
+If var.a == 2
+Wiimote1.Leds = 2
+debug = "(_)(O)(_)(_)"
+endif
+If var.a == 3
+Wiimote1.Leds = 4
+debug = "(_)(_)(O)(_)"
+endif
+If var.a == 4
+Wiimote1.Leds = 8
+debug = "(_)(_)(_)(O)"
+endif
+If var.a == 5
+Wiimote1.Leds = 9
+debug = "(O)(_)(_)(O)"
+endif
+If var.a == 6
+Wiimote1.Leds = 10
+debug = "(_)(O)(_)(O)"
+endif
+If var.a == 7
+Wiimote1.Leds = 12
+debug = "(_)(_)(O)(O)"
+endif
+If var.a == 8
+Wiimote1.Leds = 13
+debug = "(O)(_)(O)(O)"
+endif
+If var.a == 9
+Wiimote1.Leds = 14
+debug = "(_)(O)(O)(O)"
+endif
+If var.a == 10
+Wiimote1.Leds = 15
+debug = "(O)(O)(O)(O)"
+endif
+If var.a == 11
+Wiimote1.Leds = 7
+debug = "(O)(O)(O)(_)"
+endif
+If var.a == 12
+Wiimote1.Leds = 11
+debug = "(O)(O)(_)(O)"
+endif
+If var.a == 13
+Wiimote1.Leds = 3
+debug = "(O)(O)(_)(_)"
+endif
+If var.a == 14
+Wiimote1.Leds = 5
+debug = "(O)(_)(O)(_)"
+endif
+If var.a == 15
+Wiimote1.Leds = 9
+debug = "(O)(_)(_)(O)"
+endif
+If var.a == 16
+Wiimote1.Leds = 1
+debug = "(O)(_)(_)(_)"
+endif
+If var.a == 17
+Wiimote1.Leds = 2
+debug = "(_)(O)(_)(_)"
+endif
+If var.a == 18
+Wiimote1.Leds = 4
+debug = "(_)(_)(O)(_)"
+endif
+If var.a == 19
+Wiimote1.Leds = 8
+debug = "(_)(_)(_)(O)"
+endif
+If var.a == 20
+var.a = 0
+endif
+
+
+
+
+

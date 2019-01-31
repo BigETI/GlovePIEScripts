@@ -1,0 +1,22 @@
+Keyboard.Up = (Wiimote1.Classic.Up or ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1) < (-0.4))))
+Keyboard.Down = (Wiimote1.Classic.Down or ((MapRange(Wiimote1.Classic.Joy1Y, -1,1, -1,1) > (0.4))))
+Keyboard.Left = (Wiimote1.Classic.Left or ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1) < (-0.4))))
+Keyboard.Right = (Wiimote1.Classic.Right or ((MapRange(Wiimote1.Classic.Joy1X, -1,1, -1,1) > (0.4))))
+Keyboard.NUMPAD2 = Wiimote1.Classic.b
+Keyboard.NUMPAD6 = Wiimote1.Classic.a
+Keyboard.NUMPAD4 = Wiimote1.Classic.y
+Keyboard.NUMPAD8 = Wiimote1.Classic.x
+Keyboard.NUMPAD1 = (Wiimote1.Classic.LFull or Wiimote1.Classic.ZL)
+Keyboard.NUMPAD3 = (Wiimote1.Classic.RFull or Wiimote1.Classic.ZR)
+Keyboard.NUMPAD0 = Wiimote1.Classic.Plus
+Keyboard.M = Wiimote1.Classic.Home
+Wiimote1.Led1 = Wiimote1.HasClassic
+Wiimote1.Rumble = Wiimote1.HasNunchuk
+
+If ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == FALSE))
+debug = "You need a Classic Controller"
+elseif ((Wiimote1.HasNunchuk == TRUE) and (Wiimote1.HasClassic == FALSE))
+debug = "You can´t use it"
+elseif ((Wiimote1.HasNunchuk == FALSE) and (Wiimote1.HasClassic == TRUE))
+debug = "OK"
+endif
